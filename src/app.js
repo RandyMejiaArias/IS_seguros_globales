@@ -4,7 +4,7 @@ import moment from 'moment-timezone';
 import { generateCode } from './codeGenerator.js';
 
 const csvWriter = createObjectCsvWriter({
-  path: './files/output.csv',
+  path: `./files/${moment(new Date()).local().format('YYYY-MM-DD')}.csv`,
   header: [
     { id: 'poliza', title: 'Poliza' },
     { id: 'monto', title: 'Monto' },
